@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: 0;
+    font-family: 'Poppins';
+}
+
+
+img, picture, svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --columbia-blue: hsl(202, 78%, 91%);
+}
+
+
+body {
+    min-height: 100vh;
+    background-color: var(--very-light-gray);
+    padding: 30px;
+    display: grid;
+    place-content: center;
+    gap: 40px;
+    font-size: 15px;
+}
+
+
+header {
+    color: var(--very-dark-blue);
+    margin: 16px 0;
+    text-align: center;
+}
+
+
+.light { 
+    font-weight: 300;
+}
+
+
+.about {
+    margin-top: 15px;
+    color: var(--grayish-blue);
+}
+
+
+.card-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    justify-items: center;
+}
+
+
+.cards {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    color: var(--very-dark-blue);
+    line-height: 1.6;
+    box-shadow: 2px 2px 15px 0px var(--columbia-blue);
+}
+
+
+p {
+    color: var(--grayish-blue);
+}
+
+
+ul:first-child {
+    border-top: 3px solid var(--cyan);
+}
+
+
+ul:nth-child(2) {
+    border-top: 3px solid var(--red);
+}
+
+
+ul:nth-child(3) {
+    border-top: 3px solid var(--orange);
+}
+
+
+ul:last-child {
+    border-top: 3px solid var(--blue);
+}
+
+
+.logo {
+   position: relative;
+   top: 20px;
+   left: 180px;
+}
+
+
+@media only screen and (min-width: 800px) {
+
+.card-group {
+   display: grid; 
+   grid-template-areas: 
+   "super team calculator"
+   ". karma .";
+   gap: 20px;
+   place-content: center;
+}
+
+
+.supervisor {
+    grid-area: super;
+    position: relative;
+    top: 120px;
+}
+ 
+
+.team {
+    grid-area: team;
+}
+ 
+ 
+.karma {
+    grid-area: karma;
+}
+
+
+.calculator {
+    grid-area: calculator;
+    position: relative;
+    top: 120px;
+}    
+
+  
+}
